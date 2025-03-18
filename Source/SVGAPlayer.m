@@ -194,7 +194,7 @@
     [self.videoItem.sprites enumerateObjectsUsingBlock:^(SVGAVideoSpriteEntity * _Nonnull sprite, NSUInteger idx, BOOL * _Nonnull stop) {
         UIImage *bitmap;
         if (sprite.imageKey != nil) {
-            NSString *bitmapKey = [sprite.imageKey stringByDeletingPathExtension];
+            NSString *bitmapKey = sprite.imageKey;
             if (self.dynamicObjects[bitmapKey] != nil) {
                 bitmap = self.dynamicObjects[bitmapKey];
             }
